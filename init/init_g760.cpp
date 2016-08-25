@@ -128,6 +128,28 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.telephony.default_network", "9");
         property_set("ro.sf.lcd_density","240");
     }
+    /* Y550-L02 */
+    else if (strstr(model, "Y550-L02") != NULL) {
+        property_set("ro.product.model", "Y550-L02");
+        property_set("ro.product.name", "Y550-L02");
+        property_set("ro.product.device", "Y550-L02");
+        property_set("ro.build.product", "Y550-L02");
+        property_set("ro.telephony.default_network", "9");
+        property_set("ro.sf.lcd_density","240");
+        property_set("ro.build.description", "Y550-L02-user 4.4.4 GRJ90 C346B247SP01 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/Y550-L02/hwY550-L02:4.4.4/HuaweiY550-L02/C346B247SP01:user/ota-rel-keys,release-keys");
+    }
+    /* Y550-L03 */
+    else if (strstr(model, "Y550-L03") != NULL) {
+        property_set("ro.product.model", "Y550-L03");
+        property_set("ro.product.name", "Y550-L03");
+        property_set("ro.product.device", "Y550-L03");
+        property_set("ro.build.product", "Y550-L03");
+        property_set("ro.telephony.default_network", "9");
+        property_set("ro.sf.lcd_density","240");
+        property_set("ro.build.description", "Y550-L03-user 4.4.4 GRJ90 C00B249 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/Y550-L03/hwY550-L03:4.4.4/HuaweiY550-L03/C00B249:user/ota-rel-keys,release-keys");
+    }
     /* Y630-CL */
     else if (strstr(model, "Y630-CL") != NULL) {
         property_set("ro.product.model", "Y630-CL");
