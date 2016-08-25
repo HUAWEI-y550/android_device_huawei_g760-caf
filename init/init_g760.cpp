@@ -127,6 +127,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.product", "Y550-L01");
         property_set("ro.telephony.default_network", "9");
         property_set("ro.sf.lcd_density","240");
+        property_set("ro.build.description", "Y550-L01-user 4.4.4 GRJ90 C00B246 release-keys");
+        property_set("ro.build.fingerprint", "Huawei/Y550-L01/hwY550-L01:4.4.4/HuaweiY550-L01/C00B246:user/ota-rel-keys,release-keys");
     }
     /* Y550-L02 */
     else if (strstr(model, "Y550-L02") != NULL) {
