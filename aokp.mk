@@ -21,10 +21,10 @@ TARGET_SCREEN_HEIGHT := 854
 TARGET_SCREEN_WIDTH := 480
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-g760
 
-PRODUCT_NAME := cm_g760
+PRODUCT_NAME := aokp_g760
 PRODUCT_DEVICE := g760
 TARGET_UNOFFICIAL_BUILD_ID := multidevice
