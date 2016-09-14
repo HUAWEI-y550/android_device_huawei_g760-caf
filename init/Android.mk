@@ -1,5 +1,5 @@
-# Copyright (C) 2015 The CyanogenMod Project
-# Copyright (C) 2016 @surdu_petru
+#
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,19 +12,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit full device.
-$(call inherit-product, device/huawei/g760/full_g760.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 854
-TARGET_SCREEN_WIDTH := 480
+include $(CLEAR_VARS)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
+LOCAL_MODULE_TAGS := optional
+LOCAL_C_INCLUDES := system/core/init
+LOCAL_CPPFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
+LOCAL_SRC_FILES := init_g760.cpp
+LOCAL_MODULE := libinit_g760
 
-PRODUCT_GMS_CLIENTID_BASE := android-g760
-
-PRODUCT_NAME := aokp_g760
-PRODUCT_DEVICE := g760
-
+include $(BUILD_STATIC_LIBRARY)
